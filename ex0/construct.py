@@ -4,7 +4,6 @@ import site
 
 
 def construct():
-    # Codes de couleurs ANSI
     GREEN = "\033[32m"
     RED = "\033[31m"
     BLUE = "\033[34m"
@@ -14,7 +13,6 @@ def construct():
     in_venv = sys.prefix != sys.base_prefix
 
     if not in_venv:
-        # --- OUTSIDE THE MATRIX ---
         print(f"{BOLD}MATRIX STATUS: {RESET}"
               f"{RED}You're still plugged in{RESET}")
         print(f"{BLUE}Current Python:{RESET} {sys.executable}")
@@ -31,7 +29,6 @@ def construct():
         print("\nThen run this program again.")
 
     else:
-        # --- INSIDE THE CONSTRUCT ---
         env_name = os.path.basename(sys.prefix)
         pkg_path = site.getsitepackages()[0]
 
